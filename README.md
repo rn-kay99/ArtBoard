@@ -1,1 +1,1 @@
-# art-board
+# ArtBoard
