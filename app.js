@@ -1,10 +1,13 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
 const path = require("path");
+const dotenv = require("dotenv");
+
+// Load config
+dotenv.config();
 
 const app = express();
-
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 // Handlebars
 app.engine("hbs", handlebars({extname: "hbs"}));
