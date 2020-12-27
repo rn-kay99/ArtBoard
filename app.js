@@ -15,9 +15,6 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
-app.get("/", (req, res) => {
-    console.log("incomming request");
-    res.render("home");
-})
+app.use("/", require("./routes/index"));
 
 app.listen(port);
