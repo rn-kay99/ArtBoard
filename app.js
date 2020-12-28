@@ -2,6 +2,12 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const path = require("path");
 const dotenv = require("dotenv");
+const {db, getDataFromCollection} = require("./config/db")
+
+getDataFromCollection("test").then((docs) => {
+    const data = docs;
+    console.log(data);
+});
 
 // Load config
 dotenv.config();
