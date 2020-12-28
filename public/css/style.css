@@ -1,3 +1,23 @@
-body{
-    
+.header{
+    margin-bottom: 0;
+    padding: 50px 0;
+}
+
+.page-title{
+    font-size: 35px;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.custom-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i.icon-black {
+    color: black;
 }
