@@ -25,5 +25,17 @@
 
 i.icon-white {
     color: white;
-    font-size: 2.2rem;
+}
+
+.dashboard-card{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-card-number{
+    margin-left: 25px;
+}
+
+.dashboard-number{
+    font-size: 35px;
 }
