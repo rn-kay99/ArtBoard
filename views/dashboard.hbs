@@ -1,28 +1,39 @@
 <div class="row">
     <div class="col s12">
-        <h1>Dashboard</h1>
+        <h2>Dashboard</h2>
     </div>
 </div>
 
 <div class="row">
-    <div class="col s12 m6">
+    <div class="col s12 m6 l4">
         <div class="card blue darken-3">
             <div class="card-content dashboard-card">
-                <i class="material-icons large icon-white">person</i>
+                <i class="material-icons large icon-white">image</i>
                 <div class="dashboard-card-number">
-                <div class="dashboard-number white-text">0</div>
-                <div class="white-text">Paintings die du von anderen magst</div>
+                    <div class="dashboard-number white-text">1</div>
+                    <div class="white-text">Anzahl deiner Paintings</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col s12 m6">
+    <div class="col s12 m6 l4">
+        <div class="card blue darken-3">
+            <div class="card-content dashboard-card">
+                <i class="material-icons large icon-white">person</i>
+                <div class="dashboard-card-number">
+                    <div class="dashboard-number white-text">0</div>
+                    <div class="white-text">Paintings die du von anderen magst</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l4">
         <div class="card blue darken-3">
             <div class="card-content dashboard-card">
                 <i class="material-icons large icon-white">people</i>
                 <div class="dashboard-card-number">
-                <div class="dashboard-number white-text">0</div>
-                <div class="white-text">Paintings die andere von dir mögen</div>
+                    <div class="dashboard-number white-text">0</div>
+                    <div class="white-text">Paintings die andere von dir mögen</div>
                 </div>
             </div>
         </div>
@@ -31,7 +42,30 @@
 
 <div class="row">
     <div class="col s12">
-        <h2>Deine Paintings {{name}}</h2>
+        <h2>Deine Paintings</h2>
+        {{#if paintings}}
+        <div class="row">
+            {{#each paintings}}
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src={{image}}>
+                        <span class="card-title black-text">{{title}}</span>
+                        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                    </div>
+                    <div class="card-content">
+                        test
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn blue darken-3">Ansehen</a>
+                    </div>
+                </div>
 
+            </div>
+            {{/each}}
+        </div>
+        {{else}}
+        <p>Du hast bisher noch keine Paintings erstellt.</p>
+        {{/if}}
     </div>
 </div>

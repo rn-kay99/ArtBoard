@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { db, getDataFromCollection } = require("../config/db")
+
 
 // @desc homepage
 // @route GET /
@@ -7,10 +9,19 @@ router.get("/", (req, res) => {
     res.render("home");
 });
 
-router.get("/dashboard", (req, res) => {
-    let name = "kay";
+router.get("/dashboard", async (req, res) => {
+    const collection = db.collection('paintings');
+    const snapshot = await collection.get();
+    let paintings = [];
+    snapshot.forEach(doc => {
+        let data = doc.data();
+        data.id = doc.id;
+        paintings.push(data);
+    });
+    console.log(paintings);
+
     res.render("dashboard", {
-        name: name
+        paintings: paintings
     });
 })
 router.get("/paintings", (req, res) => {
