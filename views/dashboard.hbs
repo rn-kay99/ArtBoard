@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-    <div class="col s12 m6 l4">
+    <div class="col s12 l4">
         <div class="card blue darken-3">
             <div class="card-content dashboard-card">
                 <i class="material-icons large icon-white">image</i>
@@ -50,14 +50,26 @@
                 <div class="card">
                     <div class="card-image">
                         <img src={{image}}>
-                        <span class="card-title black-text">{{title}}</span>
-                        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i
+                                class="material-icons">edit</i></a>
                     </div>
                     <div class="card-content">
-                        test
+                        <span class="card-title black-text">{{title}}</span>
+
+                        <div class="dashboard-picture-meta-data">
+                            <div>
+                                <span>{{createdAt}}</span>
+                            </div>
+
+                            <div class="dashboard-picture-favorites">
+                                <i class="material-icons small icon-red">favorite</i>
+                                <span>0</span>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="card-action">
-                        <a href="#" class="btn blue darken-3">Ansehen</a>
+                        <a href="/painting/{{id}}" class="btn blue darken-3">Ansehen</a>
                     </div>
                 </div>
 

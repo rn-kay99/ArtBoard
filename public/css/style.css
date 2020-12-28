@@ -27,15 +27,35 @@ i.icon-white {
     color: white;
 }
 
+i.icon-red {
+    color: #f44336;
+}
+
 .dashboard-card{
     display: flex;
     align-items: center;
 }
 
 .dashboard-card-number{
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .dashboard-number{
     font-size: 35px;
+}
+
+.dashboard-picture-favorites{
+    display: inline-flex;
+    align-items: center;
+}
+
+.dashboard-picture-meta-data{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.img-small{
+    width: 150px;
+    height: 150px;
 }
