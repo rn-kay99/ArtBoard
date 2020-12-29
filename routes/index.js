@@ -20,4 +20,16 @@ router.get("/paintings", paintingController.painting_index)
 // @route GET /painting/:id
 router.get("/painting/:id", paintingController.painting_details);
 
+// @desc Edit single painting
+// @route GET /painting/edit/:id
+router.get("/painting/edit/:id", (req, res) => {
+    res.render("paintings/edit")
+});
+
+// @desc Show add painting page
+// @route GET /painting/add
+router.get("/paintings/add", (req, res) => {
+    res.render("paintings/add")
+});
+
 module.exports = router;
