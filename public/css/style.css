@@ -68,3 +68,8 @@ i.icon-red {
 .painting-likes{
     margin-left: 5px;
 }
+
+.dropdown-content{
+    width: max-content !important;
+    height:auto !important;
+ }

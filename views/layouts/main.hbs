@@ -14,7 +14,7 @@
 
 <body class="grey lighten-3">
     {{> _header }}
-        
+
     <div class="container">
         {{{body}}}
     </div>
@@ -23,10 +23,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         // Initialization dropdown paintings page
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.dropdown-trigger');
-            var instances = M.Dropdown.init(elems, options);
-        });
+        var dropdowns = document.querySelectorAll('.dropdown-trigger')
+        for (var i = 0; i < dropdowns.length; i++) {
+            M.Dropdown.init(dropdowns[i]);
+        }
     </script>
 </body>
 
