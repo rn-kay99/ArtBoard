@@ -6,6 +6,7 @@
 
 .header-logo{
     margin-right: 20px;
+    font-size: 3.5rem;
 }
 
 .page-title{
@@ -58,4 +59,8 @@ i.icon-red {
 .img-small{
     width: 150px;
     height: 150px;
+}
+
+.paintings-search-header{
+    margin-bottom: 60px;
 }

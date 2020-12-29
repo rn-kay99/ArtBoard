@@ -20,14 +20,27 @@ router.get("/dashboard", async (req, res) => {
         data.id = doc.id;
         paintings.push(data);
     });
-    console.log(req.params);
 
     res.render("dashboard", {
         paintings: paintings
     });
 })
-router.get("/paintings", (req, res) => {
-    res.render("paintings")
+
+// @desc Show all pictures
+// @routes GET /paintings
+router.get("/paintings", async (req, res) => {
+    const collection = db.collection('paintings');
+    const snapshot = await collection.get();
+    let paintings = [];
+    snapshot.forEach(doc => {
+        let data = doc.data();
+        data.id = doc.id;
+        paintings.push(data);
+    });
+
+    res.render("paintings", {
+        paintings: paintings
+    });
 })
 
 // @desc Show user picture
