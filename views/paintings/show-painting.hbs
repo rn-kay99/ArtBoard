@@ -5,7 +5,7 @@
         <span class="card-title">{{painting.title}}</span>
       </div>
       <div class="card-image">
-        <img src="../{{painting.image}}">
+        <img src="{{painting.image}}">
       </div>
       <div class="card-content">
         <p>I am a very simple card. I am good at containing small bits of information.
@@ -28,14 +28,16 @@
   </div>
   <div class="col s4">
     <div class="card">
-      <div class="card-content">
-        <img src="../{{painting.image}}" alt="user image" class="circle responsive-img img-small">
+      <div class="card-action blue darken-2 center white-text">
+        <h4>Author</h4>
+        <br>
+        <img src="{{painting.image}}" alt="user image" class="circle responsive-img img-small">
         <p>I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.
         </p>
       </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
+      <div class="card-action center">
+        <span>{{painting.user.firstName}} {{painting.user.lastName}}</span>
       </div>
     </div>
   </div>

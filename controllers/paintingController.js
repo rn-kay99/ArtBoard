@@ -24,9 +24,18 @@ const painting_details = async (req, res) => {
         .then((doc) => {
             let painting = doc.data();
             painting.id = doc.id;
-            res.render("paintings/show-painting", {
-                painting: painting
-            });
+            painting.user
+                .get()
+                .then((doc) => {
+                    painting.user = doc.data();
+
+                    res.render("paintings/show-painting", {
+                        painting: painting
+                    });
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
         })
         .catch((error) => {
             console.log(error);
