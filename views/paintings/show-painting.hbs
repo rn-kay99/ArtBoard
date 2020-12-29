@@ -13,7 +13,8 @@
         </p>
         <div class="dashboard-picture-meta-data">
           <div>
-            <span>{{painting.createdAt}}</span>
+            <span>Erstellt am:</span>
+            <span>{{formatDate painting.createdAt.seconds "D.M.YYYY u\m HH:mm U\hr"}}</span>
           </div>
           <div class="dashboard-picture-favorites">
             <i class="material-icons small icon-red">favorite</i>
@@ -29,15 +30,14 @@
   <div class="col s4">
     <div class="card">
       <div class="card-action blue darken-2 center white-text">
-        <h4>Author</h4>
+        <h4>Künstler</h4>
         <br>
         <img src="{{painting.image}}" alt="user image" class="circle responsive-img img-small">
         <p>I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.
         </p>
-      </div>
-      <div class="card-action center">
-        <span>{{painting.user.firstName}} {{painting.user.lastName}}</span>
+         <h5>{{painting.user.firstName}} {{painting.user.lastName}}</h5>
+         <br>
       </div>
     </div>
   </div>

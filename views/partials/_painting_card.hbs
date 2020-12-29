@@ -12,12 +12,13 @@
 
             <div class="dashboard-picture-meta-data">
                 <div>
-                    <span>{{createdAt}}</span>
+                    <span>Hinzugefügt am:</span>
+                    <span>{{formatDate createdAt.seconds "D.M.YYYY u\m HH:mm U\hr"}}</span>
                 </div>
 
                 <div class="dashboard-picture-favorites">
                     <i class="material-icons small icon-red">favorite</i>
-                    <span>0</span>
+                    <span class="painting-likes">{{likes}}</span>
                 </div>
             </div>
 
