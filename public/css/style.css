@@ -24,6 +24,10 @@
     justify-content: space-between;
 }
 
+i.icon-black {
+    color: black;
+}
+
 i.icon-white {
     color: white;
 }
@@ -32,8 +36,12 @@ i.icon-red {
     color: #f44336;
 }
 
+i.icon-blue {
+    color: #1565c0;
+}
+
 i.icon-large{
-    font-size: 2.2rem !important;
+    font-size: 2.3rem !important;
 }
 
 .img-small{

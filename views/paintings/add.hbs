@@ -1,1 +1,34 @@
-<h1>Add new Painting</h1>
+<h3>Füge ein neues Painting hinzu</h3>
+
+<div class="row">
+    <form action="/stories" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="title" id="title">
+                <label for="title">Titel</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select name="status" id="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Schreibe deine Story auf:</h5>
+                <textarea name="body" id="body"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Speichern" class="btn blue darken-2">
+            <a href="/dashboard" class="btn red">Abbrechen</a>
+        </div>
+    </form>
+</div>
