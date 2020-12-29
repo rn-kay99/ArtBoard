@@ -35,7 +35,4 @@ async function getDataFromCollection(collection) {
     return data;
 }
 
-module.exports = {
-    db: db, 
-    getDataFromCollection: getDataFromCollection
-};
+module.exports = db;
