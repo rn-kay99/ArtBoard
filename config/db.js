@@ -10,7 +10,7 @@ require("firebase/firestore");
 // TODO: Replace the following with your app's Firebase project configuration
 // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
 let firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "art-board-4686a.firebaseapp.com",
     projectId: "art-board-4686a",
     storageBucket: "art-board-4686a.appspot.com",

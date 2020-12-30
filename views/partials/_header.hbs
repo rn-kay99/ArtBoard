@@ -9,14 +9,19 @@
         <ul id="nav-mobile" class="hide-on-med-and-down">
             <li><a href="/">Start</a></li>
             <li><a href="/paintings">Paintings</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
+            {{#if user}}
+                <li><a href="/dashboard">Dashboard</a></li>
+            {{/if}}
         </ul>
         <a href="#" class="hide-on-med-and-up">
             <i class="material-icons">dehaze</i>
         </a>
+
+        {{#if user}}
         <div class="chip right">
             <i class="close  material-icons">face</i>
-            Hallo Kay
+            <span id="header-user-name">Hallo {{user.firstName}}</span>
         </div>
+        {{/if}}
     </div>
 </nav>

@@ -17,7 +17,8 @@ const painting_random_get = async (req, res) => {
             randomPainting.user = doc.data();
 
             res.render("home", {
-                paintings: randomPainting
+                paintings: randomPainting,
+                user: req.user
             });
         })
         .catch((error) => {
@@ -45,7 +46,8 @@ const painting_index = async (req, res) => {
         }
 
         res.render("paintings", {
-            paintings
+            paintings,
+            user: req.user
         });
     }
     catch (error) {
@@ -67,7 +69,8 @@ const painting_details = async (req, res) => {
                     painting.user = doc.data();
 
                     res.render("paintings/show-painting", {
-                        painting: painting
+                        painting: painting,
+                        user: req.user
                     });
                 })
                 .catch((error) => {
@@ -91,7 +94,8 @@ const painting_user_get = async (req, res) => {
     });
 
     res.render("dashboard", {
-        paintings: paintings
+        paintings: paintings,
+        user: req.user
     });
 };
 

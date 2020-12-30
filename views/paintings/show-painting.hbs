@@ -1,43 +1,47 @@
-<div class="row">
-  <div class="col s8">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">{{painting.title}}</span>
-      </div>
-      <div class="card-image">
-        <img src="{{painting.image}}">
-      </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.
-        </p>
-        <div class="dashboard-picture-meta-data">
-          <div>
-            <span>Erstellt am:</span>
-            <span>{{formatDate painting.createdAt.seconds "D.M.YYYY u\m HH:mm U\hr"}}</span>
-          </div>
-          <div class="dashboard-picture-favorites">
-            <i class="material-icons small icon-red">favorite</i>
-            <span class="painting-likes">{{painting.likes}}</span>
+{{> _header user=user}}
+
+<div class="container">
+  <div class="row">
+    <div class="col s8">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">{{painting.title}}</span>
+        </div>
+        <div class="card-image">
+          <img src="{{painting.image}}">
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+          </p>
+          <div class="dashboard-picture-meta-data">
+            <div>
+              <span>Erstellt am:</span>
+              <span>{{formatDate painting.createdAt.seconds "D.M.YYYY u\m HH:mm U\hr"}}</span>
+            </div>
+            <div class="dashboard-picture-favorites">
+              <i class="material-icons small icon-red">favorite</i>
+              <span class="painting-likes">{{painting.likes}}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card-action">
-        <a href="#" class="btn blue darken-2">Bearbeiten</a>
+        <div class="card-action">
+          <a href="#" class="btn blue darken-2">Bearbeiten</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col s4">
-    <div class="card">
-      <div class="card-action blue darken-2 center white-text">
-        <h4>Künstler</h4>
-        <br>
-        <img src="{{painting.image}}" alt="user image" class="circle responsive-img img-small">
-        <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.
-        </p>
-         <h5>{{painting.user.firstName}} {{painting.user.lastName}}</h5>
-         <br>
+    <div class="col s4">
+      <div class="card">
+        <div class="card-action blue darken-2 center white-text">
+          <h4>Künstler</h4>
+          <br>
+          <img src="{{painting.image}}" alt="user image" class="circle responsive-img img-small">
+          <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.
+          </p>
+          <h5>{{painting.user.firstName}} {{painting.user.lastName}}</h5>
+          <br>
+        </div>
       </div>
     </div>
   </div>

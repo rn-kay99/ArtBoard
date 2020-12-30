@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const paintingController = require("../controllers/paintingController")
+const paintingController = require("../controllers/paintingController");
+const { authCheck } = require("../middleware/auth");
 
 // @desc homepage
 // @route GET /
@@ -8,7 +9,7 @@ router.get("/", paintingController.painting_random_get);
 
 // @desc Dashboard
 // @route GET /dashboard
-router.get("/dashboard", paintingController.painting_user_get)
+router.get("/dashboard", authCheck, paintingController.painting_user_get);
 
 // @desc Show all paintings
 // @routes GET /paintings
