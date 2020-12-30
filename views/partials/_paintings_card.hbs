@@ -1,0 +1,32 @@
+{{#each paintings}}
+<div class="col s12 m6">
+    <div class="card">
+        <div class="card-image">
+            <img src={{image}}>
+            <a class="painting-like-button btn-floating btn-large halfway-fab blue darken-2">
+                <i class="material-icons icon-medium">favorite</i>
+            </a>
+        </div>
+        <div class="card-content">
+            <span class="card-title black-text">{{title}}</span>
+
+            <div class="dashboard-picture-meta-data">
+                <div>
+                    <span class="black-text">Künstler:</span>
+                    <a href="/" class="blue-text">{{user.displayName}}</a>
+                </div>
+
+                <div class="dashboard-picture-favorites">
+                    <i class="material-icons small icon-red">favorite</i>
+                    <span class="painting-likes">{{likes}}</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-action">
+            <a href="/painting/{{id}}" class="btn blue darken-3">Ansehen</a>
+            <a href="/painting/edit/{{id}}" class="btn blue darken-3">Bearbeiten</a>
+        </div>
+    </div>
+</div>
+{{/each}}

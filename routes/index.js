@@ -4,9 +4,7 @@ const paintingController = require("../controllers/paintingController")
 
 // @desc homepage
 // @route GET /
-router.get("/", (req, res) => {
-    res.render("home");
-});
+router.get("/", paintingController.painting_random_get);
 
 // @desc Dashboard
 // @route GET /dashboard

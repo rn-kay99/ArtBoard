@@ -1,6 +1,6 @@
 <div class="row paintings-search-header">
-    <div class="col s12">
-        <h3>Schaue dir die Paintings der anderen an.</h3>
+    <div class="col s12 z-depth-1 blue-grey lighten-5 center home-welcome-block">
+        <h1>PAINTINGS BLOG</h1>
     </div>
     <div class="col s12 white-text">
         <a class='dropdown-trigger btn blue darken-3' href='#' data-target='dropdown1'>Sortierung</a>
@@ -13,7 +13,7 @@
 
 {{#if paintings}}
 <div class="row">
-    {{> _painting_card paintings=paintings}}
+    {{> _paintings_card paintings=paintings}}
 </div>
 {{else}}
     <p> Es gibt bisher noch keine Paintings. </p>

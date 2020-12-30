@@ -49,6 +49,10 @@ i.icon-large{
     font-size: 2.3rem !important;
 }
 
+i.icon-larger{
+    font-size: 3.5rem !important;
+}
+
 .img-small{
     width: 150px;
     height: 150px;
@@ -65,4 +69,20 @@ i.icon-large{
 .dropdown-content{
     width: max-content !important;
     height:auto !important;
+}
+
+.home-welcome-block{
+    margin: 20px;
+    padding-bottom: 10px !important;
+}
+
+.home-block-left,
+.home-block-right
+{
+    margin-top: 10px;
+    padding-bottom: 20px !important;
+}
+
+.home-block-right{
+    padding-top: 20px !important;
 }
