@@ -18,6 +18,10 @@
     vertical-align: middle;
 }
 
+.btn-google{
+    display: inline-flex;
+}
+
 .custom-nav{
     display: flex;
     align-items: center;
@@ -83,7 +87,7 @@ i.icon-larger{
     margin-top: 20px;
 }
 
-.search-option-title{
+.text-with-icon{
     margin-left: 10px;
 }
 
@@ -109,5 +113,13 @@ i.icon-larger{
 }
 
 .page-footer{
-    margin-top: 80px;
+    margin-top: 100px;
+}
+
+.container-with-padding{
+    padding: 25px 0;
+}
+
+.custom-dark-blue{
+    background-color: #114065;
 }
