@@ -25,22 +25,26 @@
 
         </div> --}}
     </div>
-    <div class="home-mood-image-container">
-        <div class="home-mood-image">
-            {{> _painting_card paintings=paintings}}
-        </div>
-        {{#unless user}}
-        <div class="home-login-widget blue darken-3 white-text z-depth-1">
-            <h3 class="center">MELDE DICH AN</h3>
-            <p class="center">Login dich mit deinem Google Account an. <br> Und dann bist du bereit um direkt loszulegen!</p>
-            <div class="section center">
-                <a href="/auth/google" class="btn btn-large red darken-1">
-                    Login mit Google
-                </a>
-            </div>
-        </div>
-        {{/unless}}
-    </div>
 </div>
 
-{{> _footer}}
+<div class="blue darken-2">
+    <div class="container">
+        <div class="home-mood-image-container">
+            <div class="home-mood-image">
+                {{> _painting_card paintings=paintings}}
+            </div>
+            {{#unless user}}
+            <div class="home-login-widget blue darken-3 white-text z-depth-1">
+                <h4 class="center">MELDE DICH AN</h4>
+                <p class="center">Login dich mit deinem Google Account an. <br> Und dann bist du bereit um direkt
+                    loszulegen!</p>
+                <div class="section center">
+                    <a href="/auth/google" class="btn btn-large red darken-1">
+                        Login mit Google
+                    </a>
+                </div>
+            </div>
+            {{/unless}}
+        </div>
+    </div>
+</div>
