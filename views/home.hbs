@@ -2,28 +2,45 @@
 
 <div class="container">
     <div class="row">
-        <div class="col s12 z-depth-1 blue darken-2 white-text center home-welcome-block">
-            <h1>WILLKOMMEN <i class="material-icons icon-larger icon-red">favorite</i></h1>
+        <div class="col s8">
+            <h3>WILLKOMMEN <i class="material-icons icon-large icon-red">favorite</i></h3>
+            <p>Hier findest du eine Sammlung von tollen Paintings. Lasse dich von ihnen inspirieren oder füge dein
+                Painting hinzu damit es andere sehen können.</p>
         </div>
-        <div class="col s6 z-depth-1 white home-block-left">
-            <h3 class="center">ENTDECKE NEUES</h3>
-            {{> _painting_card paintings=paintings}}
-            <a href="" class="btn blue darken-2">Ansehen</a>
-            <a href="" class="btn blue darken-2">Mehr von dem Künstler</a>
-        </div>
-        <div class="col s5 offset-s1 z-depth-1 white home-block-left center">
+
+        {{!-- <div class="col s6 center">
+
             {{#if user}}
-                <h3 class="center">Wie wärs?</h3>
-                <a href="/" class="btn blue darken-2">Füge neues Painting hinzu</a>
-                <a href="/" class="btn blue darken-2">Zu deinem Profil</a>
+            <h3 class="center">Wie wärs?</h3>
+            <a href="/" class="btn blue darken-2">Füge neues Painting hinzu</a>
+            <a href="/" class="btn blue darken-2">Zu deinem Profil</a>
             {{else}}
-                <h3 class="center">MELDE DICH AN</h3>
-                <div class="section">
-                    <a href="/auth/google" class="btn btn-large red darken-1">
-                        Login mit Google
-                    </a>
-                </div>
+            <h3 class="center">MELDE DICH AN</h3>
+            <div class="section">
+                <a href="/auth/google" class="btn btn-large red darken-1">
+                    Login mit Google
+                </a>
+            </div>
             {{/if}}
+
+        </div> --}}
+    </div>
+    <div class="home-mood-image-container">
+        <div class="home-mood-image">
+            {{> _painting_card paintings=paintings}}
         </div>
+        {{#unless user}}
+        <div class="home-login-widget blue darken-3 white-text z-depth-1">
+            <h3 class="center">MELDE DICH AN</h3>
+            <p class="center">Login dich mit deinem Google Account an. <br> Und dann bist du bereit um direkt loszulegen!</p>
+            <div class="section center">
+                <a href="/auth/google" class="btn btn-large red darken-1">
+                    Login mit Google
+                </a>
+            </div>
+        </div>
+        {{/unless}}
     </div>
 </div>
+
+{{> _footer}}
