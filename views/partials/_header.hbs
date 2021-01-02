@@ -1,16 +1,13 @@
-<div class="black">
-    {{!-- <div class="header container">
-        <i class="material-icons icon-white header-logo">brush</i>
-        <a href="/" class="white-text page-title">WHAT A PAINTING!</a>
-    </div> --}}
-</div>
-<nav class="blue darken-3">
-    <div class="nav-wrapper container custom-nav">
+<nav class="white">
+    <div class="nav-wrapper container custom-nav ">
         <ul id="nav-mobile" class="hide-on-med-and-down">
-            <li><a href="/">Start</a></li>
-            <li><a href="/paintings">Paintings</a></li>
+            <li><a href="/" class="black-text">Startseite</a></li>
+            <li><a href="/paintings" class="black-text">Blog</a></li>
             {{#if user}}
-                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/dashboard" class="black-text">Dashboard</a></li>
+                <li><a href="/auth/logout" class="black-text">Logout</a></li>
+            {{else}}
+                <li><a href="/auth/google" class="black-text">Login</a></li>
             {{/if}}
         </ul>
         <a href="#" class="hide-on-med-and-up">
@@ -22,13 +19,6 @@
             <i class="material-icons chip-icon">face</i>
             <span id="header-user-name">Hallo {{user.firstName}}</span>
         </div>
-        {{else}}
-        <ul id="nav-mobile" class="hide-on-med-and-down">
-            <li>
-                <a href="/auth/google">Login</a>
-            </li>
-
-        </ul>
         {{/if}}
     </div>
 </nav>

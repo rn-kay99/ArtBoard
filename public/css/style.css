@@ -44,6 +44,10 @@ i.icon-blue {
     color: #1565c0;
 }
 
+i.icon-grey {
+    color: #757575;
+}
+
 i.icon-medium{
     font-size: 1.8rem !important;
     line-height: 59px !important;
