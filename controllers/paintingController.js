@@ -85,7 +85,7 @@ const painting_details = async (req, res) => {
 // get all pictures from a user
 const painting_user_get = async (req, res) => {
     const collection = db.collection('paintings');
-    const snapshot = await collection.get();
+    const snapshot = await collection.where('userId', '==', req.user.userId).get();
     let paintings = [];
     snapshot.forEach(doc => {
         let data = doc.data();

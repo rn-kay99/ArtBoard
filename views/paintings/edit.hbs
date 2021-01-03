@@ -1,1 +1,39 @@
-<h1>Edit Painting</h1>
+{{> _header user=user}}
+
+<div class="container">
+    <h3>Bearbeite dein Painting</h3>
+
+    <div class="row">
+        <form action="/stories/{{story._id}}" method="POST" class="col s12">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="row">
+                <div class="input-field">
+                    <input type="text" name="title" id="title" value="{{story.title}}">
+                    <label for="title">Titel</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <select name="status" id="status">
+                        <option value="public" selected>Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                    <label for="status">Status</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <h5>Schreibe deine Story auf:</h5>
+                    <textarea name="body" id="body">{{story.body}}</textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Speichern" class="btn red darken-1">
+                <a href="/dashboard" class="btn red darken-1">Abbrechen</a>
+            </div>
+        </form>
+    </div>
+</div>

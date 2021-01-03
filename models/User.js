@@ -20,9 +20,7 @@ class User {
             accountType: this.accountType
         });
 
-        let user = await findUser(this.userId);
-
-        return user.data();
+        return await findUser(this.userId);
     }
 }
 
